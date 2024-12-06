@@ -20,7 +20,7 @@ config :logger, level: :info
 host = "https://www.thevillagesf.com" || "https://thevillagesf.com"
 
 config :the_village_sf, TheVillageSfWeb.Endpoint,
-  force_ssl: [rewrite_on: [:x_forwarded_proto]]
+  force_ssl: [rewrite_on: [:x_forwarded_proto]],
   url: [host: host, port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json",
   check_origin: [
