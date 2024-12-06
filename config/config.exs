@@ -11,11 +11,9 @@ config :the_village_sf,
   ecto_repos: [TheVillageSf.Repo],
   generators: [timestamp_type: :utc_datetime]
 
-host = "localhost" || "https://www.thevillagesf.com" || "https://thevillagesf.com"
-
 # Configures the endpoint
 config :the_village_sf, TheVillageSfWeb.Endpoint,
-  url: [host: host],
+  url: [host: "localhost"],
   adapter: Bandit.PhoenixAdapter,
   render_errors: [
     formats: [html: TheVillageSfWeb.ErrorHTML, json: TheVillageSfWeb.ErrorJSON],

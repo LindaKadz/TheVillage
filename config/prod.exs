@@ -17,5 +17,17 @@ config :swoosh, local: false
 # Do not print debug messages in production
 config :logger, level: :info
 
+host = "https://www.thevillagesf.com" || "https://thevillagesf.com"
+
+config :the_village_sf, TheVillageSfWeb.Endpoint,
+  force_ssl: [rewrite_on: [:x_forwarded_proto]]
+  url: [host: host, port: 80],
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  check_origin: [
+    "//www.thevillagesf.com",
+    "//thevillagesf.com",
+    "//the-village.gigalixirapp.com/"
+  ]
+
 # Runtime production configuration, including reading
 # of environment variables, is done on config/runtime.exs.
