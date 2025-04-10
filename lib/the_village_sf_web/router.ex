@@ -18,6 +18,7 @@ defmodule TheVillageSfWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/menu", PageController, :menu
   end
 
   # Other scopes may use custom stacks.

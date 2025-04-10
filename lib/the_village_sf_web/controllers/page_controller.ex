@@ -7,4 +7,10 @@ defmodule TheVillageSfWeb.PageController do
     date = Date.utc_today()
     render(conn, :home, layout: false, date: date.year)
   end
+
+  def menu(conn, _params) do
+    # The home page is often custom made,
+    # so skip the default app layout.
+    render(conn, :menu)
+  end
 end
