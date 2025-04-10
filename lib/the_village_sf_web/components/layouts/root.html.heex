@@ -4,8 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content={get_csrf_token()} />
+    <meta property="og:title" content="The Village - Pancake Tacos in SF" />
+    <meta property="og:description" content="San Francisco's one-of-a-kind pancake taco brunch experience." />
+    <meta name="description" content="Discover The Village, Best Brunch Spot in Nob Hill, San Francisco. Indulge in our signature pancake tacos, Eggs Benedict, and a variety of breakfast delights.">
+    <meta property="og:image" content="https://www.thevillagesf.com/images/pancake-tacos.jpg" />
     <.live_title suffix=" SF">
-      <%= assigns[:page_title] || "The Village" %>
+      <%= "The Village | Best Pancake Tacos & Brunch in San Francisco" %>
     </.live_title>
     <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
     <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
